@@ -1,0 +1,24 @@
+@mixin transform($preperty){
+    -webkit-transform: $preperty;
+    -ms-transform: $preperty;
+    transform: $preperty;
+    
+};
+
+%message-shared{
+    border: 1px solid #4d0066;
+    padding: 10px;
+    color: blue;
+}
+
+@mixin small-brekpoint{
+    @media screen and (min-width: $small){
+        @content
+    }
+}
+
+@mixin border($box){
+   -webkit-box-sizing: $box;
+    box-sizing: $box; 
+    border: $box
+}
